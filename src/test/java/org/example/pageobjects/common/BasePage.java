@@ -1,4 +1,4 @@
-package org.example.pageobjects;
+package org.example.pageobjects.common;
 
 
 import org.openqa.selenium.WebDriver;

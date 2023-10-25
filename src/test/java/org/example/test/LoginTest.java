@@ -60,7 +60,7 @@ public class LoginTest extends BaseTest{
 
         ManagerHomePage managerHomePage = new ManagerHomePage(driver);
 
-        Assert.assertTrue("We are in the manager home page.", managerHomePage.managerIdLabel.isDisplayed());
+        Assert.assertTrue("We are in the manager home page.", managerHomePage.managerIdLabelButton.isDisplayed());
     }
 
     @Test(description = "Login with a valid but not registered User Id.")

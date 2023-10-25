@@ -1,10 +1,11 @@
 package org.example.pageobjects;
 
+import org.example.pageobjects.common.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class SignUpPage extends BasePage{
+public class SignUpPage extends BasePage {
 
     @FindBy(id = "emailid")
     public WebElement emailIdTextField;

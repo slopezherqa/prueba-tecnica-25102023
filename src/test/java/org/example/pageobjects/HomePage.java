@@ -1,11 +1,12 @@
 package org.example.pageobjects;
 
+import org.example.pageobjects.common.BasePage;
 import org.example.testdata.dto.UserDTO;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class HomePage extends BasePage{
+public class HomePage extends BasePage {
     private final String pageURL = "https://demo.guru99.com/V4/";
 
     @FindBy(css = "a[href=\"http://demo.guru99.com/\"]")
