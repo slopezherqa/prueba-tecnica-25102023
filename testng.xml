@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Test-Suite" >
+    <test name="Prueba Tecnica" >
+        <classes>
+            <class name="org.example.test.LoginTest" />
+            <class name="org.example.test.ManagerHomeTest" />
+        </classes>
+    </test>
+</suite>

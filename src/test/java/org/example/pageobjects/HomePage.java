@@ -18,8 +18,14 @@ public class HomePage extends BasePage {
     @FindBy(name = "uid")
     public WebElement userIdTextField;
 
+    @FindBy(id = "message23")
+    public WebElement emptyUserIDLabel;
+
     @FindBy(name = "password")
     public WebElement passwordTextField;
+
+    @FindBy(id = "message18")
+    public WebElement emptyPasswordLabel;
 
     @FindBy(name = "btnLogin")
     public WebElement btnLogin;

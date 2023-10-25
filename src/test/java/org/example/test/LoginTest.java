@@ -63,6 +63,28 @@ public class LoginTest extends BaseTest{
         Assert.assertTrue("We are in the manager home page.", managerHomePage.managerIdLabelButton.isDisplayed());
     }
 
+    @Test(description = "")
+    public void verifyFormValidationMessages(){
+
+        HomePage homePage = new HomePage(driver);
+
+        homePage.userIdTextField.click();
+        homePage.passwordTextField.click();
+        Assert.assertTrue("user id warning message is displayed when userid field is blank", homePage.emptyUserIDLabel.isDisplayed());
+        Assert.assertEquals("user id warning message has the correct text", "User-ID must not be blank", homePage.emptyUserIDLabel.getText());
+
+        homePage.userIdTextField.click();
+        Assert.assertTrue("password warning message is displayed when password field is blank", homePage.emptyPasswordLabel.isDisplayed());
+        Assert.assertEquals("password warning message has the correct text", "Password must not be blank", homePage.emptyPasswordLabel.getText());
+
+
+        homePage.enterUserId("test_userid");
+        homePage.enterPassword("test_password");
+        Assert.assertFalse("user id warning message is not displayed when userid field is filled with text", homePage.emptyUserIDLabel.isDisplayed());
+        Assert.assertFalse("password warning message is not displayed when password field is filled with text", homePage.emptyPasswordLabel.isDisplayed());
+
+    }
+
     @Test(description = "Login with a valid but not registered User Id.")
     public void loginWithNotFoundUserId(){
         UserDTO user = TestDataManager.getUserWithIncorrectUserId();
@@ -72,6 +94,12 @@ public class LoginTest extends BaseTest{
     @Test(description = "Login with a registered user Id but incorrect password.")
     public void loginWithIncorrectPassword(){
         UserDTO user = TestDataManager.getUserWithIncorrectPassword();
+        verifyLoginWithIncorrectData(user);
+    }
+
+    @Test(description = "Login with empty user and password.")
+    public void loginWithEmptyUserPassword (){
+        UserDTO user = new UserDTO().withUserId("").withUserPassword("");
         verifyLoginWithIncorrectData(user);
     }
 
