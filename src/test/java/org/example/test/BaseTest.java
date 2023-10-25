@@ -1,4 +1,4 @@
-package org.example;
+package org.example.test;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
@@ -23,7 +23,7 @@ public class BaseTest {
         driver = new ChromeDriver();
         driver.get(URL);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.manage().window().setSize(new Dimension(1920, 1080));
+        //driver.manage().window().setSize(new Dimension(1920, 1080));
         driver.manage().window().maximize();
 
         acceptCookies();

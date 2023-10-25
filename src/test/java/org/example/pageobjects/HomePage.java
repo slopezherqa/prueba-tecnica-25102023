@@ -52,6 +52,7 @@ public class HomePage extends BasePage{
     }
 
 
+
     public ManagerHomePage login (UserDTO userData){
         enterUserId(userData.getUserId());
         enterPassword(userData.getUserPassword());

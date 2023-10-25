@@ -1,4 +1,4 @@
-package org.example;
+package org.example.test;
 
 import junit.framework.Assert;
 import org.example.testdata.TestDataManager;
@@ -7,11 +7,9 @@ import org.example.pageobjects.HomePage;
 import org.example.pageobjects.ManagerHomePage;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.NoAlertPresentException;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 import org.testng.annotations.Test;
 
-import java.time.Duration;
 
 
 public class LoginTest extends BaseTest{
@@ -27,7 +25,7 @@ public class LoginTest extends BaseTest{
     }
 
     @Test(description = "Check that the reset button is working.")
-    public void resetButtonIsWorking() throws InterruptedException {
+    public void resetButtonIsWorking() {
         HomePage homePage = new HomePage(driver);
 
         String userId = "slajdpasjd";
@@ -74,7 +72,6 @@ public class LoginTest extends BaseTest{
     @Test(description = "Login with a registered user Id but incorrect password.")
     public void loginWithIncorrectPassword(){
         UserDTO user = TestDataManager.getUserWithIncorrectPassword();
-
         verifyLoginWithIncorrectData(user);
     }
 

@@ -2,6 +2,8 @@ package org.example.testdata;
 
 import org.example.testdata.dto.UserDTO;
 
+import java.util.Random;
+
 public class TestDataManager {
 
 
@@ -18,6 +20,12 @@ public class TestDataManager {
 
     public static UserDTO getUserWithIncorrectUserId(){
         return getUserWithCorrectData().withUserId("mngr534232");
+    }
+
+
+    public static String getRandomEmail(){
+        int randomInteger = new Random().nextInt(10000);
+        return "randomemail" + randomInteger + "@mail.com";
     }
 
 }
