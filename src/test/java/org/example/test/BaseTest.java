@@ -41,7 +41,7 @@ public class BaseTest {
      * @throws InterruptedException
      */
     public void acceptCookies() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         driver.switchTo().frame(driver.findElement(By.cssSelector(".faktor-iframe-wrapper")));
         driver.findElement(By.id("save")).click();
         driver.switchTo().defaultContent();
