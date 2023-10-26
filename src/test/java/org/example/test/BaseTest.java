@@ -20,9 +20,9 @@ public class BaseTest {
         String URL = "https://demo.guru99.com/V4/";
         System.setProperty(DRIVER_PROPERTY, DRIVER_PATH);
         ChromeOptions options = new ChromeOptions();
-        //options.addArguments("--no-sandbox");
-        //options.addArguments("--disable-dev-shm-usage");
-        //options.addArguments("--headless");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--headless");
         driver = new ChromeDriver(options);
         driver.get(URL);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
