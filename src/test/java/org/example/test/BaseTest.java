@@ -15,20 +15,17 @@ public class BaseTest {
 
     @BeforeMethod
     public void setup() throws InterruptedException {
-        String DRIVER_PATH = "src/test/resources/chromedriver";
+        String DRIVER_PATH = "src/test/resources/chromedriver.exe";
         String DRIVER_PROPERTY = "webdriver.chrome.driver";
         String URL = "https://demo.guru99.com/V4/";
         System.setProperty(DRIVER_PROPERTY, DRIVER_PATH);
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--headless");
         driver = new ChromeDriver(options);
         driver.get(URL);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
 
-        //acceptCookies();
+        acceptCookies();
     }
 
     @AfterMethod
@@ -44,8 +41,7 @@ public class BaseTest {
 
         Thread.sleep(5000);
         driver.switchTo().frame(driver.findElement(By.cssSelector(".faktor-iframe-wrapper")));
-        if(!driver.findElements(By.id("save")).isEmpty())
-            driver.findElement(By.id("save")).click();
+        driver.findElement(By.id("save")).click();
         driver.switchTo().defaultContent();
     }
 
