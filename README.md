@@ -13,7 +13,7 @@ Crear casos de uso a testear como:
 5. Crear Workflow GitHub Actions para ejecutar los tests cada noche.
 
 
-#Configuración
+## Configuración
 
 1. Descargar entorno, preferiblemente InteliJ C Edition.
 2. Abrir el proyecto desde InteliJ
