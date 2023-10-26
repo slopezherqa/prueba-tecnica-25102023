@@ -15,7 +15,11 @@ Crear casos de uso a testear como:
 
 ## Configuración
 
-1. Descargar entorno, preferiblemente InteliJ C Edition.
-2. Abrir el proyecto desde InteliJ
+1. Descargar entorno, preferiblemente IntelliJ C Edition.
+2. Abrir el proyecto desde IntelliJ
 3. Hacer checkout a develop ya que es la rama que está preparada para ser ejecutada en local.
 4. Ejecutar tests. (Es posible que dependiendo de la versión de google chrome instalada sea necesario cambiar el chromedriver).
+
+## Github Actions
+
+En la pestaña Actions se ha configurado un job que ejecuta los tests al final de cada dia pero también se puede ejecutar manualmente.
