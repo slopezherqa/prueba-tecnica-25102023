@@ -28,7 +28,7 @@ public class BaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
 
-        acceptCookies();
+        //acceptCookies();
     }
 
     @AfterMethod
