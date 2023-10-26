@@ -22,4 +22,4 @@ Crear casos de uso a testear como:
 
 ## Github Actions
 
-En la pestaña Actions se ha configurado un job que ejecuta los tests al final de cada dia pero también se puede ejecutar manualmente.
+En la pestaña Actions se ha configurado un job que ejecuta los tests al final de cada dia pero también se puede ejecutar manualmente. Se espera que el workflow muestre una traza de error dado que uno de los tests falla intencionadamente.
