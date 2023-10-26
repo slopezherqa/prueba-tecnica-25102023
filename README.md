@@ -12,3 +12,10 @@ Crear casos de uso a testear como:
 4. Crear un README.md con instrucciones
 5. Crear Workflow GitHub Actions para ejecutar los tests cada noche.
 
+
+##Configuración
+
+1. Descargar entorno, preferiblemente InteliJ C Edition.
+2. Abrir el proyecto desde InteliJ
+3. Hacer checkout a develop ya que es la rama que está preparada para ser ejecutada en local.
+4. Ejecutar tests. (Es posible que dependiendo de la versión de google chrome instalada sea necesario cambiar el chromedriver).
