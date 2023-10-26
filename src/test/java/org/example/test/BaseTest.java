@@ -15,7 +15,7 @@ public class BaseTest {
 
     @BeforeMethod
     public void setup() throws InterruptedException {
-        String DRIVER_PATH = "src/test/resources/chromedriver.exe";
+        String DRIVER_PATH = "src/test/resources/chromedriver";
         String DRIVER_PROPERTY = "webdriver.chrome.driver";
         String URL = "https://demo.guru99.com/V4/";
         System.setProperty(DRIVER_PROPERTY, DRIVER_PATH);
